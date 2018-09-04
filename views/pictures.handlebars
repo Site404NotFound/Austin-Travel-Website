@@ -1,0 +1,28 @@
+<div class="bg" id="picturesbg"></div>
+
+<div id="headcont"class="container">
+  <div id="heading" class="jumbotron jumbopics">
+    <h1 class="display-3"><i class="fa fa-camera-retro" aria-hidden="true"></i> Austin Art Gallery</h1>
+    <p class="lead">Graffiti?  Man, This is Art!</p>
+    <p>
+      Austin's known for it's art.  It's forever been the last bastion for the weird and the eccentric in a widely
+      reserved and conservative state.  The artistic aesthetic has drawn many the creative soul to Austin's doorstep to realize
+      their passion.  Be it music, art, or even the food, there's always an added touch of inspiration.  Even the Graffiti here
+      has found a way to transcend the medium and rise to another level.  You can't come to Austin without getting your picture taken
+      by the <em>'I Love You So Much'</em> wall at Joe's Coffee on South Congress.
+      <br>
+      <br>
+      See some examples below.  Click on the pictures if you'd like to view them full screen.
+    </p>
+  </div>
+
+  <div class="row">
+    {{#each dataList}}
+    <div class="col-lg-4 image">
+      <a href="/Pictures/{{this.image}}">
+        <img class="img-thumbnail picgal" src="/Pictures/{{this.image}}">
+      </a>
+    </div>
+    {{/each}}
+  </div>
+</div>
