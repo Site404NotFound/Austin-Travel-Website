@@ -1,0 +1,82 @@
+<div class="bg" id="extrasbg"></div>
+
+<div id="headcont"class="container">
+  <div id="heading" class="jumbotron">
+    <h1 class="display-3">
+      <i class="fa fa-map-o" aria-hidden="true"></i>
+      <strong>A Little Extra</strong>
+    </h1>
+    <p class="lead">For All The Things We Couldn't Answer Here...</p>
+    <p>
+      Austin's a big little city with a lot to do.  There's no way this website could
+      cover every aspect of what all Austin has to offer (at least not with any justice).
+      Included below are a bunch of external websites that delve deeper into their own
+      respective topics.  You wanna know more about the University? BOOM! We got a
+      link to that.  ACL, SXSW, Events going on around town year round?  All also included below.
+      Heck, there's even a city map to help you out.<br><br>
+
+      Thanks for your time, and <strong>Keep Austin Weird!</strong>
+    </p>
+        <div id="scrollbox">
+          This website is brought to you by...<br><br>
+          James Hippler<br>
+          Oregon State University<br>
+          CS 290-400 Web Development <br><br>
+          ...Hi...That's me <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+            <img class="img-thumbnail" src="/Pictures/me.jpg">
+        </div>
+    </div>
+  </div>
+</div>
+
+<div id="headcont"class="container restven">
+  <div class="row">
+    <div class="col">
+      <div id="heading" class="jumbotron event">
+        <h1 class="display-title">External Websites</h1>
+        <hr class="my-4">
+        <ul class="extras">
+          {{#each dataList}}
+          <li class="liextra">
+            <a href="{{this.website}}">
+              <button type="button" class="btn btn-outline-dark">{{this.name}}</button>
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+
+    <div class="col">
+      <div id="heading" class="jumbotron event">
+        <h1 class="display-title">Austin City Map</h1>
+        <hr class="my-4">
+        <div class="map" id="googleMap" style="width:100%;height:400px;"></div>
+        <script>
+          var apiKey = 'AIzaSyD9RTmIBrLkISQV7REq3iyImdvA2AZQsv4';
+          function myMap() {
+            var mapProp= {
+              center:new google.maps.LatLng(30.2747, -97.7404),
+              zoom: 13,
+            };
+
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+          }
+        </script>
+      </div>
+    </div>
+  <div class="w-100"></div>
+</div>
+</div>
+
+<div id="headcont"class="container restven">
+  <div id="heading" class="jumbotron event">
+    <h1 class="display-title">
+      Thanks for Checking Us Out!
+    </h1>
+    <hr class="my-4">
+    <img class="img-thumbnail" src="Pictures/austin-panorama.jpg" alt="Austin Howdy">
+  </div>
+</div>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9RTmIBrLkISQV7REq3iyImdvA2AZQsv4&callback=myMap"></script>
