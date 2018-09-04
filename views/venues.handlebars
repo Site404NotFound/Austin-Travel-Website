@@ -1,0 +1,35 @@
+<div class="bg" id="venbg"></div>
+
+<div id="headcont"class="container">
+  <div id="heading" class="jumbotron">
+    <h1 class="display-3"><i class="fa fa-glass" aria-hidden="true"></i> Wet Your Whistle</h1>
+    <p class="lead">Feel Like Grabbin Some Drinks or Catchin a Show?</p>
+    <p>
+      While you're here you're probably going to want to catch a live show or grab a few drinks to
+      escape the heat.  Fortunately for you, you can trip in Austin and fall into some sort of venue or
+      bar.  Sixth street is the major row of adult debauchery that runs several miles through the middle of downtown.
+      It's separated into three very distinct sections that contain very unique atmospheres.  West sixth street
+      is high class and sophisticated.  The drinks are expensive and the clientele are generally well dressed.  Then there's
+      the middle stretch, affectionatly termed Dirty Sixth.  This is were the college kids and out of towners tend to congregate.
+      Further east, the bars become a little more cozy, the clientele a little more beatnik.  It's not as fancy but it's definitely
+      the spot if you're looking for somewhere quiet.
+    </p>
+  </div>
+</div>
+
+{{#each dataList}}
+<div id="headcont"class="container restven">
+  <div id="heading" class="jumbotron event">
+    <h1 class="display-title"> {{this.name}}</h1>
+    <p class="lead">
+      <p><strong>Website:</strong><a href="{{this.website}}"> {{this.website}}</a><br>
+        <strong>Address:</strong> {{this.address}}</p>
+      </p>
+      <hr class="my-4">
+      <div class="inner-event">
+        <p>{{this.summary}}</p>
+      </div>
+    <img class="img-thumbnail" src="Pictures/{{this.image}}" alt="{{this.name}}">
+  </div>
+</div>
+{{/each}}

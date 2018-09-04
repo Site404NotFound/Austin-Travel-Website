@@ -1,0 +1,40 @@
+<div class="bg" id="videosbg"></div>
+
+<div id="headcont"class="container">
+  <div id="heading" class="jumbotron">
+    <h1 class="display-3"><i class="fa fa-video-camera" aria-hidden="true"></i> Austin Video Gallery</em></h1>
+    <p class="lead">Videos That Showcase the City</p>
+    <p>
+      While Austin may not be known as the city that never sleeps, there’s always a constant bustling.  With the influx of
+      new residents and tourists, the city is regularly changing its face.  Growing and adapting to reflect the dichotomy of art and technology
+      that the city has become associated with.  A fellow Austinite named Andrew Takano (<a href="http://highfieldmedia.com/">Highfield Media</a>)
+      has done an excellent job capturing the essence of the city.  He's prefectly seized Austin's beauty with his intricate time-lapse and hyper-lapse cinematography.
+      Be sure to check out his website and maybe even get some merch.
+      <br>
+      <br>
+      Now...pick a video below, put it to full screen and enjoy.
+    </p>
+  </div>
+</div>
+
+<div id="vidcont" class="container">
+
+  <div class="container vidcont">
+    <div class="row">
+      {{#each dataList}}
+      <div class="col">
+        <div id="heading" class="jumbotron event vid">
+          <iframe src="{{this.video1}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </div>
+
+      <div class="col">
+      <div id="heading" class="jumbotron event vid">
+        <iframe src="{{this.video2}}" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </div>
+      <div class="w-100"></div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
